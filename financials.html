@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री गोविंद ट्रस्ट - Financial Projections</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .projection-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .projection-table th, .projection-table td {
+            padding: 1.25rem 1rem;
+            text-align: right;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .projection-table th:first-child, .projection-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--bg-dark);
+        }
+        .projection-table th {
+            background: var(--bg-light);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .projection-table tr.total-row {
+            background: #f0fdf4;
+            font-weight: 800;
+        }
+        .projection-table tr.total-row td {
+            color: #166534;
+            border-bottom: none;
+        }
+        .projection-table tr:hover:not(th):not(.total-row) {
+            background: #f8fafc;
+        }
+
+        .unit-eco-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--primary);
+        }
+        .unit-bar-container {
+            display: flex;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .unit-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesh-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(-35 50 50)">
+                            <rect x="10" y="44" width="80" height="12" rx="6" fill="url(#wood)" />
+                            <circle cx="30" cy="50" r="2" fill="#444"/>
+                            <circle cx="40" cy="50" r="2" fill="#444"/>
+                            <circle cx="50" cy="50" r="2" fill="#444"/>
+                            <circle cx="60" cy="50" r="2" fill="#444"/>
+                            <circle cx="70" cy="50" r="2" fill="#444"/>
+                            <circle cx="85" cy="50" r="3" fill="#444"/>
+                            <rect x="20" y="44" width="2" height="12" fill="#eab308" />
+                            <rect x="24" y="44" width="2" height="12" fill="#eab308" />
+                            <rect x="92" y="44" width="2" height="12" fill="#eab308" />
+                            <path d="M 85 45 C 90 15 65 5 60 25 C 60 35 75 40 85 45" fill="#10b981" opacity="0.9"/>
+                            <circle cx="70" cy="22" r="5" fill="#0284c7"/>
+                            <circle cx="70" cy="22" r="2.5" fill="#eab308"/>
+                        </g>
+                        <defs>
+                            <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#d97706" />
+                                <stop offset="50%" stop-color="#f59e0b" />
+                                <stop offset="100%" stop-color="#b45309" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="brand-text">श्री गोविंद ट्रस्ट</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="franchise.html" class="nav-link">Franchise</a>
+                <a href="marketing.html" class="nav-link">Marketing</a>
+                <a href="financials.html" class="nav-link active">Financials</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <a href="index.html#offer" class="btn btn-primary">निवेश प्रस्ताव <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </nav>
+
+    <!-- Financials Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="badge-spiritual" data-aos="fade-down">
+                <i class="fa-solid fa-chart-line"></i> Robust Unit Economics
+            </span>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                डिटेल्ड <span class="text-saffron">फाइनेंशियल प्रोजेक्शन्स</span>
+            </h1>
+            <p class="subtitle mt-2" data-aos="fade-up" data-aos-delay="200" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                हमारा मॉडल उच्च मार्जिन (High Margin) और शून्य CAC (Customer Acquisition Cost) पर आधारित है। एक बार प्लांट सेटअप होने के बाद, फिक्स्ड कॉस्ट न्यूनतम हो जाती है और प्रॉफिट मार्जिन तेज़ी से बढ़ता है।
+            </p>
+        </div>
+    </section>
+
+    <!-- Unit Economics -->
+    <section class="section section-bg-white">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="badge">Per User Metrics</span>
+                <h2 class="section-title">यूनिट इकोनॉमिक्स (Unit Economics)</h2>
+                <p class="section-desc">प्रति यूज़र (₹300/माह) के सब्सक्रिप्शन से आने वाले रेवेन्यू का विस्तृत विवरण।</p>
+            </div>
+
+            <div class="unit-eco-card" data-aos="fade-up" data-aos-delay="100" style="max-width: 900px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                    <div>
+                        <div style="font-size: 1.1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">ARPU (Average Rev Per User)</div>
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--bg-dark); line-height: 1;">₹300<span style="font-size: 1.25rem; color: var(--text-muted); font-weight: 500;"> / महीना</span></div>
+                    </div>
+                </div>
+
+                <div class="unit-bar-container">
+                    <div class="unit-bar" style="width: 50%; background: #ef4444;" title="कच्चा माल व डिलीवरी">₹150 (50%)</div>
+                    <div class="unit-bar" style="width: 30%; background: #10b981;" title="शुद्ध लाभ (EBITDA)">₹90 (30%)</div>
+                    <div class="unit-bar" style="width: 20%; background: #3b82f6;" title="रॉयल्टी व प्लेटफ़ॉर्म फीस">₹60 (20%)</div>
+                </div>
+
+                <div class="grid-3" style="margin-top: 2rem;">
+                    <div>
+                        <div style="width: 15px; height: 15px; background: #ef4444; border-radius: 3px; display: inline-block; margin-right: 8px;"></div>
+                        <strong style="font-size: 1.1rem;">₹150 - ऑपरेशन्स (OpEx)</strong>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;">आटा, घी, डिलीवरी कॉस्ट, और प्लांट मेंटेनेंस। (जैसे-जैसे स्केल बढ़ेगा, यह लागत 40% तक कम होगी)।</p>
+                    </div>
+                    <div>
+                        <div style="width: 15px; height: 15px; background: #10b981; border-radius: 3px; display: inline-block; margin-right: 8px;"></div>
+                        <strong style="font-size: 1.1rem;">₹90 - फ्रेंचाइजी लाभ</strong>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;">ऑपरेटर (इन्वेस्टर) का शुद्ध मासिक लाभ (EBITDA मार्जिन)।</p>
+                    </div>
+                    <div>
+                        <div style="width: 15px; height: 15px; background: #3b82f6; border-radius: 3px; display: inline-block; margin-right: 8px;"></div>
+                        <strong style="font-size: 1.1rem;">₹60 - रॉयल्टी (Trust)</strong>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;">टेक्नोलॉजी, ऐप, ब्रांड और मार्केटिंग सपोर्ट के लिए प्लेटफ़ॉर्म फीस।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5 Year Projections -->
+    <section class="section section-bg-stone">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="badge">Growth Plan</span>
+                <h2 class="section-title">5-वर्षीय वित्तीय अनुमान (Projections)</h2>
+                <p class="section-desc">यह प्रोजेक्शन सिंगल फ्रेंचाइजी (Single Unit) की ग्रोथ को दर्शाता है, जिसमें CAC शून्य मानी गई है।</p>
+            </div>
+
+            <div style="overflow-x: auto; padding: 1rem 0;" data-aos="fade-up" data-aos-delay="100">
+                <table class="projection-table">
+                    <thead>
+                        <tr>
+                            <th>Metrix (प्रति यूनिट)</th>
+                            <th>Year 1</th>
+                            <th>Year 2</th>
+                            <th>Year 3</th>
+                            <th>Year 4</th>
+                            <th>Year 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>सक्रिय यूज़र्स (Active Subs)</td>
+                            <td>20,000</td>
+                            <td>35,000</td>
+                            <td>50,000</td>
+                            <td>70,000</td>
+                            <td>1,00,000</td>
+                        </tr>
+                        <tr>
+                            <td>सालाना ग्रॉस रेवेन्यू (Gross Revenue)</td>
+                            <td>₹7.2 Cr</td>
+                            <td>₹12.6 Cr</td>
+                            <td>₹18.0 Cr</td>
+                            <td>₹25.2 Cr</td>
+                            <td>₹36.0 Cr</td>
+                        </tr>
+                        <tr>
+                            <td>ऑपरेशन्स खर्च (COGS + OpEx)</td>
+                            <td>₹3.6 Cr (50%)</td>
+                            <td>₹6.0 Cr (48%)</td>
+                            <td>₹8.1 Cr (45%)</td>
+                            <td>₹10.8 Cr (43%)</td>
+                            <td>₹14.4 Cr (40%)</td>
+                        </tr>
+                        <tr>
+                            <td>ट्रस्ट रॉयल्टी (20%)</td>
+                            <td>₹1.44 Cr</td>
+                            <td>₹2.52 Cr</td>
+                            <td>₹3.60 Cr</td>
+                            <td>₹5.04 Cr</td>
+                            <td>₹7.20 Cr</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>फ्रेंचाइजी का शुद्ध लाभ (EBITDA)</td>
+                            <td>₹2.16 Cr (30%)</td>
+                            <td>₹4.08 Cr (32%)</td>
+                            <td>₹6.30 Cr (35%)</td>
+                            <td>₹9.36 Cr (37%)</td>
+                            <td>₹14.4 Cr (40%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-center text-muted mt-4" style="font-size: 0.95rem;" data-aos="fade-up">
+                * नोट: ये आंकड़े अनुमानित (Projected) हैं और 'स्केल की इकोनॉमीज़' (Economies of Scale) के कारण समय के साथ मार्जिन में सुधार दिखाया गया है।
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3 style="font-weight: 800; color: var(--secondary); font-family: 'Yatra One', cursive; font-size: 1.8rem; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="rotate(-35 50 50)">
+                        <rect x="10" y="44" width="80" height="12" rx="6" fill="url(#wood2)" />
+                        <circle cx="30" cy="50" r="2" fill="#222"/>
+                        <circle cx="40" cy="50" r="2" fill="#222"/>
+                        <circle cx="50" cy="50" r="2" fill="#222"/>
+                        <circle cx="60" cy="50" r="2" fill="#222"/>
+                        <circle cx="70" cy="50" r="2" fill="#222"/>
+                        <circle cx="85" cy="50" r="3" fill="#222"/>
+                        <path d="M 85 45 C 90 15 65 5 60 25 C 60 35 75 40 85 45" fill="#10b981"/>
+                        <circle cx="70" cy="22" r="4" fill="#0284c7"/>
+                        <circle cx="70" cy="22" r="2" fill="#eab308"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="wood2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f59e0b" />
+                            <stop offset="100%" stop-color="#b45309" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                श्री गोविंद ट्रस्ट
+            </h3>
+            <p>© 2026. सभी अधिकार सुरक्षित। धर्म और तकनीक का संगम।</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

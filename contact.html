@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री गोविंद ट्रस्ट - Investor Contact & FAQ</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        details {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        summary {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--bg-dark);
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        details[open] summary::after {
+            content: '-';
+        }
+        .faq-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            border-top: 1px solid var(--border-color);
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+        }
+        
+        .contact-form {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--bg-dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesh-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="rotate(-35 50 50)">
+                            <rect x="10" y="44" width="80" height="12" rx="6" fill="url(#wood)" />
+                            <circle cx="30" cy="50" r="2" fill="#444"/>
+                            <circle cx="40" cy="50" r="2" fill="#444"/>
+                            <circle cx="50" cy="50" r="2" fill="#444"/>
+                            <circle cx="60" cy="50" r="2" fill="#444"/>
+                            <circle cx="70" cy="50" r="2" fill="#444"/>
+                            <circle cx="85" cy="50" r="3" fill="#444"/>
+                            <rect x="20" y="44" width="2" height="12" fill="#eab308" />
+                            <rect x="24" y="44" width="2" height="12" fill="#eab308" />
+                            <rect x="92" y="44" width="2" height="12" fill="#eab308" />
+                            <path d="M 85 45 C 90 15 65 5 60 25 C 60 35 75 40 85 45" fill="#10b981" opacity="0.9"/>
+                            <circle cx="70" cy="22" r="5" fill="#0284c7"/>
+                            <circle cx="70" cy="22" r="2.5" fill="#eab308"/>
+                        </g>
+                        <defs>
+                            <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#d97706" />
+                                <stop offset="50%" stop-color="#f59e0b" />
+                                <stop offset="100%" stop-color="#b45309" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="brand-text">श्री गोविंद ट्रस्ट</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="franchise.html" class="nav-link">Franchise</a>
+                <a href="marketing.html" class="nav-link">Marketing</a>
+                <a href="financials.html" class="nav-link">Financials</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+
+            <a href="index.html#offer" class="btn btn-primary">निवेश प्रस्ताव <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </nav>
+
+    <!-- Contact & FAQ Header -->
+    <section class="hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <span class="badge-spiritual" data-aos="fade-down">
+                <i class="fa-solid fa-handshake"></i> Let's Talk
+            </span>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                निवेशकों के लिए <span class="text-saffron">संपर्क और जानकारी</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section section-bg-white" style="padding-top: 0;">
+        <div class="container">
+            <div class="grid-2" style="align-items: start; gap: 4rem;">
+                
+                <!-- FAQ Section -->
+                <div data-aos="fade-right">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: var(--secondary);"><i class="fa-regular fa-circle-question"></i> आम सवाल (FAQ)</h3>
+                    <div class="faq-container">
+                        
+                        <details open>
+                            <summary>आपकी लीगल एंटिटी (Legal Entity) क्या है?</summary>
+                            <div class="faq-content">
+                                हम एक गैर-लाभकारी (Non-Profit) ट्रस्ट के रूप में रजिस्टर्ड हैं, लेकिन हमारा ऑपरेशनल मॉडल पूरी तरह से कॉर्पोरेट और टेक-संचालित (Tech-driven) है, जिससे हम अधिकतम एफिशिएंसी (Efficiency) प्राप्त करते हैं।
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>क्या डोनर्स को 80G टैक्स बेनिफिट मिलेगा?</summary>
+                            <div class="faq-content">
+                                हाँ! हमारा ट्रस्ट सेक्शन 80G के तहत रजिस्टर्ड है, इसलिए ऐप के माध्यम से किया गया कोई भी सब्सक्रिप्शन या दान टैक्स-फ्री (Tax-free) होगा, जो इन्वेस्टर्स और डोनर्स दोनों के लिए फायदेमंद है।
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>अगर फ्रेंचाइजी में मशीन खराब हो जाए, तो क्या होगा?</summary>
+                            <div class="faq-content">
+                                हमारी 24/7 डेडिकेटेड सपोर्ट टीम और वेंडर पार्टनर्स हैं। मशीन डाउनटाइम को न्यूनतम रखने के लिए हम प्रिवेंटिव मेंटेनेंस (Preventive Maintenance) और तत्काल रिप्लेसमेंट पार्ट्स की गारंटी देते हैं।
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>इन्वेस्टर्स के लिए एग्जिट (Exit) स्ट्रेटेजी क्या है?</summary>
+                            <div class="faq-content">
+                                ट्रस्ट मॉडल होने के बावजूद, हम फ्रेंचाइजी निवेशकों को 3 से 5 साल के बाद उनके कैपिटल पर एक आकर्षक प्रीमियम (Premium) के साथ बायबैक (Buy-back) का विकल्प प्रदान करते हैं, या वे रेवेन्यू शेयरिंग मॉडल में आजीवन बने रह सकते हैं।
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div data-aos="fade-left">
+                    <div class="contact-form">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--bg-dark);">Schedule a Pitch Meeting</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">विस्तृत PDF पिच डेक मंगाने या फ्रेंचाइजी के लिए अपॉइंटमेंट फिक्स करने हेतु फॉर्म भरें।</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('धन्यवाद! हमारी टीम आपसे जल्द ही संपर्क करेगी।');">
+                            <div class="form-group">
+                                <label class="form-label">पूरा नाम (Full Name)</label>
+                                <input type="text" class="form-control" placeholder="उदा: राहुल शर्मा" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">ईमेल आईडी (Email)</label>
+                                <input type="email" class="form-control" placeholder="rahul@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">फोन नंबर (Phone)</label>
+                                <input type="tel" class="form-control" placeholder="+91 9876543210" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">रुचि का क्षेत्र (Interest Area)</label>
+                                <select class="form-control" required>
+                                    <option value="" disabled selected>चुनें...</option>
+                                    <option value="franchise">फ्रेंचाइजी लेना (Franchise Partner)</option>
+                                    <option value="investor">ट्रस्ट में निवेश (Seed Angel/VC)</option>
+                                    <option value="other">अन्य जानकारी</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem; font-size: 1.1rem; border: none; cursor: pointer;">
+                                मीटिंग फिक्स करें <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3 style="font-weight: 800; color: var(--secondary); font-family: 'Yatra One', cursive; font-size: 1.8rem; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="rotate(-35 50 50)">
+                        <rect x="10" y="44" width="80" height="12" rx="6" fill="url(#wood2)" />
+                        <circle cx="30" cy="50" r="2" fill="#222"/>
+                        <circle cx="40" cy="50" r="2" fill="#222"/>
+                        <circle cx="50" cy="50" r="2" fill="#222"/>
+                        <circle cx="60" cy="50" r="2" fill="#222"/>
+                        <circle cx="70" cy="50" r="2" fill="#222"/>
+                        <circle cx="85" cy="50" r="3" fill="#222"/>
+                        <path d="M 85 45 C 90 15 65 5 60 25 C 60 35 75 40 85 45" fill="#10b981"/>
+                        <circle cx="70" cy="22" r="4" fill="#0284c7"/>
+                        <circle cx="70" cy="22" r="2" fill="#eab308"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="wood2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f59e0b" />
+                            <stop offset="100%" stop-color="#b45309" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                श्री गोविंद ट्रस्ट
+            </h3>
+            <p>© 2026. सभी अधिकार सुरक्षित। धर्म और तकनीक का संगम।</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
