@@ -837,7 +837,7 @@ footer h3 {
 @media (max-width: 768px) {
     .hero-title { font-size: 2.8rem; }
     .nav-container { flex-direction: row; justify-content: space-between; align-items: center; position: relative; }
-    .nav-container .btn-primary { margin-left: auto; font-size: 0.9rem; padding: 0.6rem 1rem; }
+    .nav-container .btn-primary { display: none; }
     .menu-toggle { display: block; }
     .nav-menu { 
         display: none; 
@@ -891,7 +891,7 @@ footer h3 {
     .logo { gap: 0.5rem; }
     .brand-text { font-size: 1.3rem; }
     .logo-icon { font-size: 1rem; padding: 0.3rem 0.5rem; }
-    .nav-container .btn-primary { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+    .nav-container .btn-primary { display: none; }
     .menu-toggle { font-size: 1.5rem; margin-left: 0.5rem; }
     .spiritual-cta h2 { font-size: 2.2rem; }
     .spiritual-cta { padding: 4rem 0; }
