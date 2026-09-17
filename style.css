@@ -90,9 +90,15 @@ a {
 
 .grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
     align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .mt-1 { margin-top: 1rem; }
@@ -217,6 +223,17 @@ a {
 }
 .nav-link:hover::after, .nav-link.active::after {
     width: 100%;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--bg-dark);
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+.menu-toggle:hover {
+    color: var(--primary);
 }
 
 /* === MESH GRADIENT BACKGROUND === */
@@ -807,7 +824,7 @@ footer h3 {
 
 /* === RESPONSIVE === */
 @media (max-width: 992px) {
-    .grid-2, .data-card-grid, .step-cards, .f-grid, .esg-grid { 
+    .grid-2, .grid-3, .data-card-grid, .step-cards, .f-grid, .esg-grid { 
         grid-template-columns: 1fr; 
         gap: 2rem; 
     }
@@ -819,19 +836,32 @@ footer h3 {
 
 @media (max-width: 768px) {
     .hero-title { font-size: 2.8rem; }
-    .nav-container { flex-direction: row; justify-content: space-between; flex-wrap: wrap; }
+    .nav-container { flex-direction: row; justify-content: space-between; align-items: center; position: relative; }
+    .nav-container .btn-primary { margin-left: auto; font-size: 0.9rem; padding: 0.6rem 1rem; }
+    .menu-toggle { display: block; }
     .nav-menu { 
+        display: none; 
+        flex-direction: column;
         width: 100%; 
-        justify-content: flex-start; 
-        margin-top: 1.5rem; 
-        gap: 1.5rem; 
-        order: 3; 
-        overflow-x: auto; 
-        flex-wrap: nowrap; 
-        padding-bottom: 0.5rem; 
-        -webkit-overflow-scrolling: touch; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        border-radius: 0 0 16px 16px;
+        z-index: 1000;
+        border-top: 1px solid var(--border-color);
+        gap: 0;
     }
-    .nav-menu::-webkit-scrollbar { display: none; } /* Hide scrollbar for a cleaner look */
+    .nav-menu.active { display: flex; }
+    .nav-link { 
+        padding: 1rem 0; 
+        width: 100%; 
+        border-bottom: 1px solid var(--border-color); 
+        font-size: 1.1rem;
+    }
+    .nav-link:last-child { border-bottom: none; }
     .btn { padding: 0.75rem 1.25rem; font-size: 0.9rem; }
     .hero { padding: 8rem 0 4rem; }
     .section { padding: 4rem 0; }
@@ -861,9 +891,8 @@ footer h3 {
     .logo { gap: 0.5rem; }
     .brand-text { font-size: 1.3rem; }
     .logo-icon { font-size: 1rem; padding: 0.3rem 0.5rem; }
-    .btn { padding: 0.6rem 1rem; font-size: 0.8rem; }
-    .nav-menu { gap: 1.5rem; padding-left: 0.5rem; padding-right: 1.5rem; }
-    .nav-link { font-size: 0.95rem; white-space: nowrap; }
+    .nav-container .btn-primary { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+    .menu-toggle { font-size: 1.5rem; margin-left: 0.5rem; }
     .spiritual-cta h2 { font-size: 2.2rem; }
     .spiritual-cta { padding: 4rem 0; }
     .hero-img-wrapper { border-width: 4px; }
